@@ -1,13 +1,12 @@
 [Unit]
 Description=gunicorn daemon
-Requires=gunicorn.socket
 After=network.target
+
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/jobportal
-ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/jobportal/jobportal/jobportal.sock jobportal.wsgi:application
+WorkingDirectory=/home/ubuntu/jobportal/jobportal
+ExecStart=/home/ubuntu/env/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/jobportal/jobportal/jobportal.sock jobportal.wsgi:application
 
-       
 [Install]
 WantedBy=multi-user.target
