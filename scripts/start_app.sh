@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["54.255.216.144"]/' /home/ubuntu/jobportal/jobportal/settings.py
+sed -i 's/\[]/\["13.60.251.170"]/' /home/ubuntu/jobportal/jobportal/settings.py
 
 python manage.py migrate 
 python manage.py makemigrations     
