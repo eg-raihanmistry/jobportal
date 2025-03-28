@@ -9,3 +9,12 @@ class BasicAPiView(APIView):
                 "message" : "Basic View Rendering !"
             }
         )
+    
+class ProjectApiView(APIView):
+
+    def get(self, request):
+        return Response(
+            {
+                "message" : "Welcome to project !"
+            }
+        )
